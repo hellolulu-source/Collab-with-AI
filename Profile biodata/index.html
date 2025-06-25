@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Profil Saya</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+      header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 20px;
+        background-color: #f8f8f8;
+        border-bottom: 1px solid #ccc;
+      }
+      nav a {
+        margin-left: 15px;
+        text-decoration: none;
+        color: #333;
+        font-weight: bold;
+      }
+      .hero {
+        display: flex;
+        padding: 30px;
+        border-bottom: 1px solid #ccc;
+      }
+      .hero .text {
+        flex: 1;
+        padding-right: 20px;
+      }
+      .hero .text h3 {
+        margin-top: 0;
+      }
+      .hero .text button {
+        margin-top: 10px;
+        padding: 8px 16px;
+        font-size: 14px;
+      }
+      .hero .image {
+        flex: 1;
+        text-align: center;
+      }
+      .hero .image img {
+        max-width: 100%;
+        height: auto;
+      }
+
+      section {
+        padding: 40px 20px;
+        text-align: center;
+      }
+      .biodata {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+        max-width: 900px;
+        margin: 20px auto 0;
+      }
+      .biodata div {
+        border: 1px solid #ccc;
+        padding: 15px;
+        background-color: #f9f9f9;
+      }
+
+      .portfolio {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        flex-wrap: wrap;
+        max-width: 1000px;
+        margin: auto;
+      }
+      .project {
+        width: 300px;
+        border: 1px solid #ccc;
+        background-color: #fff;
+        text-align: center;
+        padding: 10px;
+      }
+      .project img {
+        width: 100%;
+        height: auto;
+        margin-bottom: 10px;
+      }
+      .project strong {
+        display: block;
+        margin-top: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Header Navigasi -->
+    <header>
+      <div><strong>Brand</strong></div>
+      <nav>
+        <a href="#">Header</a>
+        <a href="#">Biodata</a>
+        <a href="#">Portofolio</a>
+      </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <div class="hero">
+      <div class="text">
+        <h3>Selamat Datang di Website Saya</h3>
+        <p>
+          Ini adalah contoh header dengan dua kolom. Kolom kiri berisi teks
+          seperti ini.
+        </p>
+        <button>Pelajari Lebih Lanjut</button>
+      </div>
+      <div class="image">
+        <img src="https://via.placeholder.com/600x400" alt="Gambar" />
+      </div>
+    </div>
+
+    <!-- About Me Section -->
+    <section>
+      <h2>About Me</h2>
+      <p>A brief introduction about myself</p>
+      <div class="biodata">
+        <div>Full Name</div>
+        <div>Education</div>
+        <div>Pekerjaan</div>
+        <div>Contact</div>
+        <div>Hobi</div>
+        <div>Alamat</div>
+      </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section>
+      <h2>Portofolio</h2>
+      <div class="portfolio">
+        <div class="project">
+          <img src="https://via.placeholder.com/350x200" alt="Proyek 1" />
+          <strong>Proyek 1</strong>
+          <p>Deskripsi proyek 1.</p>
+        </div>
+        <div class="project">
+          <img src="https://via.placeholder.com/350x200" alt="Proyek 2" />
+          <strong>Proyek 2</strong>
+          <p>Deskripsi proyek 2.</p>
+        </div>
+        <div class="project">
+          <img src="https://via.placeholder.com/350x200" alt="Proyek 3" />
+          <strong>Proyek 3</strong>
+          <p>Deskripsi proyek 3.</p>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
