@@ -1,0 +1,240 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Navbar Profesional & Estetik (All-in-One)</title>
+    <!-- Font Awesome untuk Ikon -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Limelight&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Favicon (opsional, pastikan path benar) -->
+    <link rel="icon" type="image/png" href="image/iconbelajar.jpg" />
+    <!-- CSS Internal -->
+    <style>
+      /* === RESET & GLOBAL STYLES === */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        /* Menggunakan font Poppins yang lebih modern untuk teks umum */
+        font-family: "Poppins", sans-serif;
+        /* Background gradien agar lebih dinamis */
+        background: linear-gradient(to right, #cd792b, #c26712);
+        /* Menambahkan konten dummy agar bisa scroll dan melihat efek sticky */
+        height: 200vh;
+        /* Mencegah scroll horizontal yang tidak diinginkan saat menu mobile tersembunyi */
+        overflow-x: hidden;
+      }
+
+      /* === NAVBAR STYLING === */
+      .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem 8%;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        width: 100%;
+        height: 80px;
+
+        /* Efek Glassmorphism yang disempurnakan */
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px); /* Untuk Safari */
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.2);
+      }
+
+      .logo a {
+        /* Menggunakan font Limelight untuk logo agar tetap unik */
+        font-family: "Limelight", sans-serif;
+        font-size: 2rem;
+        color: #fff;
+        text-decoration: none;
+        text-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+      }
+
+      .nav-links {
+        display: flex;
+        list-style: none;
+      }
+
+      .nav-links li {
+        margin-left: 25px;
+      }
+
+      .nav-links a {
+        display: flex;
+        align-items: center;
+        gap: 8px; /* Jarak antara ikon dan teks */
+        color: #fff;
+        text-decoration: none;
+        font-size: 1rem;
+        font-weight: 600;
+        padding: 8px 12px;
+        border-radius: 8px;
+        transition: all 0.3s ease;
+      }
+
+      .nav-links a:hover {
+        background-color: rgba(255, 255, 255, 0.2);
+        transform: translateY(-2px); /* Efek sedikit terangkat saat hover */
+      }
+
+      /* === BURGER MENU (MOBILE) === */
+      .burger {
+        display: none; /* Sembunyikan di desktop */
+        cursor: pointer;
+      }
+
+      .burger div {
+        width: 25px;
+        height: 3px;
+        background-color: #fff;
+        margin: 5px;
+        border-radius: 3px;
+        transition: all 0.3s ease;
+      }
+
+      /* === RESPONSIVE DESIGN (max-width: 992px) === */
+      @media screen and (max-width: 992px) {
+        .nav-links {
+          position: absolute;
+          right: 0;
+          top: 80px; /* Tinggi navbar */
+          background: rgba(255, 255, 255, 0.1);
+          backdrop-filter: blur(10px);
+          -webkit-backdrop-filter: blur(10px);
+          width: 60%;
+          height: calc(100vh - 80px);
+          flex-direction: column;
+          align-items: center;
+          padding-top: 2rem;
+          transform: translateX(100%); /* Sembunyikan di luar layar */
+          transition: transform 0.5s ease-in-out;
+        }
+
+        .nav-links li {
+          margin: 20px 0;
+          opacity: 0; /* Sembunyikan link untuk animasi */
+        }
+
+        .burger {
+          display: block; /* Tampilkan burger di mobile */
+        }
+      }
+
+      /* Kelas aktif untuk menampilkan menu mobile */
+      .nav-active {
+        transform: translateX(0%);
+      }
+
+      /* Animasi untuk link saat menu mobile aktif */
+      @keyframes navLinkFade {
+        from {
+          opacity: 0;
+          transform: translateX(50px);
+        }
+        to {
+          opacity: 1;
+          transform: translateX(0px);
+        }
+      }
+
+      /* Kelas untuk animasi burger menjadi 'X' */
+      .toggle .line1 {
+        transform: rotate(-45deg) translate(-5px, 6px);
+      }
+      .toggle .line2 {
+        opacity: 0;
+      }
+      .toggle .line3 {
+        transform: rotate(45deg) translate(-5px, -6px);
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Menggunakan tag <nav> yang lebih semantik -->
+    <nav class="navbar">
+      <div class="logo">
+        <a href="#">Hello</a>
+      </div>
+
+      <ul class="nav-links">
+        <li>
+          <a href="#"
+            ><i class="fa-solid fa-house-user"></i><span>Home</span></a
+          >
+        </li>
+        <li>
+          <a href="#"
+            ><i class="fa-solid fa-table-cells-large"></i
+            ><span>Kategori</span></a
+          >
+        </li>
+        <li>
+          <a href="#"
+            ><i class="fa-solid fa-basket-shopping"></i><span>Promo</span></a
+          >
+        </li>
+        <li>
+          <a href="#"
+            ><i class="fa-solid fa-headset"></i><span>Layanan</span></a
+          >
+        </li>
+        <li>
+          <a href="#"
+            ><i class="fa-solid fa-user-lock"></i><span>Masuk</span></a
+          >
+        </li>
+      </ul>
+
+      <!-- Ikon Burger untuk tampilan mobile -->
+      <div class="burger">
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="line3"></div>
+      </div>
+    </nav>
+
+    <!-- JavaScript Internal -->
+    <script>
+      const navSlide = () => {
+        const burger = document.querySelector(".burger");
+        const nav = document.querySelector(".nav-links");
+        const navLinks = document.querySelectorAll(".nav-links li");
+
+        burger.addEventListener("click", () => {
+          // Toggle Nav
+          nav.classList.toggle("nav-active");
+
+          // Animate Links
+          navLinks.forEach((link, index) => {
+            if (link.style.animation) {
+              link.style.animation = "";
+            } else {
+              link.style.animation = `navLinkFade 0.5s ease forwards ${
+                index / 7 + 0.5
+              }s`;
+            }
+          });
+          // Burger Animation
+          burger.classList.toggle("toggle");
+        });
+      };
+
+      navSlide();
+    </script>
+  </body>
+</html>
